@@ -7,19 +7,37 @@ import What_We_Do from "./What_We_Do";
 
 
 function Home() {
-  const [count, setCount] = useState(0);
-  
   return (
-    <div style={{ overflowY: 'scroll'}}>
-      <div style={{position: 'absolute', top: '55%', left: '25%', transform: 'translate(-50%, -50%)', width: '400px', textAlign: 'left'}}>
-        <h1 style={{color: '#005232'}}>Empowering Thai Youth to lead Climate Action</h1>
-        <h2 style={{color: '#30964D'}}>We're a youth-led platform making climate
-          education fun and far from boring.</h2>
-     </div>
+    <div style={{ 
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      gap: '40px',
+      padding: '40px 5%',
+      minHeight: 'calc(100vh - 70px)', // Full screen height minus header
+      boxSizing: 'border-box',
+      flexWrap: 'wrap' // Drops the image below text on mobile screens
+    }}>
+      
+      {/* Left Column: Text Content */}
+      <div style={{ flex: '1', minWidth: '500px', textAlign: 'left' }}>
+        <h1 style={{ color: '#005232', fontSize: '3rem', margin: '0 0 20px 0', lineHeight: '1.2' }}>
+          Empowering Thai Youth to lead Climate Action
+        </h1>
+        <h2 style={{ color: '#30964D', fontSize: '1.5rem', fontWeight: 'normal', lineHeight: '1.4', margin: 0 }}>
+          We're a youth-led platform making climate education fun and far from boring.
+        </h2>
+      </div>
 
-    <div style={{position: 'absolute', top: '10%', right: '5%', width: '600px'}}>
-      <img src={yellow_girl} alt="Yellow Girl" style={{width: '100%', height: 'auto'}}/>
-    </div>
+      {/* Right Column: Illustration */}
+      <div style={{ flex: '1', minWidth: '400px', display: 'flex', justifyContent: 'center' }}>
+        <img 
+          src={yellow_girl} 
+          alt="Yellow Girl" 
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
+      </div>
+
     </div>
   );
 }

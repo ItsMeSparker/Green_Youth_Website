@@ -16,8 +16,9 @@ export default function Header() {
                 {/*Inside the IconButton, we 
                     can render various icons*/}
 
-                <div sx={{flex: 1}}><img src={logo} className='logo' alt="Green Youth Logo"></img></div>
-
+                <div><img src={logo} className='logo' alt="Green Youth Logo" /></div>
+                
+                <div style={{selfAlign: 'center', display: 'flex', gap: '20px'}}>
                 <Link to="/" style={{ textDecoration: 'none' }}>
                     <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Home</Button>
                 </Link>
@@ -31,6 +32,7 @@ export default function Header() {
                 </Link>
                 
                 <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Get Involved</Button>
+                </div>
 
                 <Button sx={{border: '2px solid black',backgroundColor:'#006B2D', color: "#FFFFFF", marginLeft: 'auto'}}>Join Now</Button>
             </Toolbar>
