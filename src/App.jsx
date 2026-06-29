@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import About_Us from "./About_Us";
 import What_We_Do from "./What_We_Do";
-
+import Get_Involved from "./Get_Involved";
 
 function Home() {
   return (
@@ -50,6 +50,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/About_Us" element={<About_Us />} />
         <Route path="/What_We_Do" element={<What_We_Do />} />
+        <Route path="/Get_Involved" element={<Get_Involved />} />
       </Routes>
     </Router>
   )

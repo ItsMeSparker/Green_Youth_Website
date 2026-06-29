@@ -19,19 +19,21 @@ export default function Header() {
                 <div><img src={logo} className='logo' alt="Green Youth Logo" /></div>
                 
                 <div style={{selfAlign: 'center', display: 'flex', gap: '20px'}}>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                    <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Home</Button>
-                </Link>
+                    <Link to="/" style={{ textDecoration: 'none' }}>
+                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Home</Button>
+                    </Link>
 
-                <Link to="/About_Us" style={{ textDecoration: 'none' }}>
-                    <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>About Us</Button>
-                </Link>
-                
-                <Link to="/What_We_Do" style={{ textDecoration: 'none' }}>
-                    <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>What We Do</Button>
-                </Link>
-                
-                <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Get Involved</Button>
+                    <Link to="/About_Us" style={{ textDecoration: 'none' }}>
+                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>About Us</Button>
+                    </Link>
+                    
+                    <Link to="/What_We_Do" style={{ textDecoration: 'none' }}>
+                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>What We Do</Button>
+                    </Link>
+                    
+                    <Link to="/Get_Involved" style={{ textDecoration: 'none' }}>
+                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Get Involved</Button>
+                    </Link>
                 </div>
 
                 <Button sx={{border: '2px solid black',backgroundColor:'#006B2D', color: "#FFFFFF", marginLeft: 'auto'}}>Join Now</Button>
