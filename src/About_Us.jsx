@@ -2,7 +2,11 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import './index.css';
-
+import Rocket from './assets/Rocket.png';
+import SharkHand from './assets/ShakeHand.png';
+import Tree from './assets/Tree.png';
+import People from './assets/People.png'
+import Earth from './assets/Earth.png'
 
 function About_Us() {
     const [count, setCount] = useState(0);
