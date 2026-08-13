@@ -8,6 +8,7 @@ import Get_Involved from "./Get_Involved";
 
 function Home() {
   return (
+    <>
     <div style={{ 
       display: 'flex',
       justifyContent: 'space-between',
@@ -37,8 +38,16 @@ function Home() {
           style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </div>
+    </div>
+
+    <div style={{
+      border: '1px solid #BECABB4D',
+      minHeight: '310px',
+      boxSizing: 'border-box',
+    }}>
 
     </div>
+    </>
   );
 }
 
