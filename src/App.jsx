@@ -40,13 +40,25 @@ function Home() {
       </div>
     </div>
 
-    <div style={{
-      border: '1px solid #BECABB4D',
-      minHeight: '310px',
-      boxSizing: 'border-box',
-    }}>
+      <div style={{
+        border: '1px solid #BECABB4D',
+        minHeight: '310px',
+        boxSizing: 'border-box',
+        padding: '40px 5%',
+        alighnItems: 'center',
+      }}>
+        <p style = {{ color: '#3F4A3E', maxHeight: '15px', fontSize: '10px', fontWeight: '800', letterSpacing: '4px'}}>
+          STRATEGIC GLOBAL PARTNERS
+        </p>
 
-    </div>
+        <div class = "scrollmenu" style = {{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: '5%', marginTop: '8%'}}>
+          <a>UNESCAP</a>
+          <a>EUROPEAN UNION</a>
+          <a>UNDP</a>
+          <a>NEW WAVE</a>
+          <a>CLIMATE FOUNDATIONs</a>
+        </div>
+      </div>
     </>
   );
 }

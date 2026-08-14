@@ -187,3 +187,18 @@
   height: 100px;
   width: auto;
 }
+
+div.scrollmenu {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: #191C1C;
+  text-align: center;
+  font-weight: 800;
+  font-size: 30px;
+  padding: 6px;
+  text-decoration: none;
+}
