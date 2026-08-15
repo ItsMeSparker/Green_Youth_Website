@@ -42,7 +42,7 @@ function Home() {
 
       <div style={{
         border: '1px solid #BECABB4D',
-        minHeight: '310px',
+        minHeight: '270px',
         boxSizing: 'border-box',
         padding: '40px 5%',
         alighnItems: 'center',
@@ -58,6 +58,23 @@ function Home() {
           <a>NEW WAVE</a>
           <a>CLIMATE FOUNDATIONs</a>
         </div>
+      </div>
+      <div style={{
+        backgroundColor: '#FEEDF0',
+        minHeight: '280px',
+        flexDirection: 'row',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        gap: '40px',
+        padding: '40px 5%',
+        boxSizing: 'border-box'
+      }}>
+        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>People reached through our media</p> </div>
+        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Youth engaged directly through events</p> </div>
+        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Schools across Thailand reached</p> </div>
+        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Countries reached globally</p> </div>
+
       </div>
     </>
   );

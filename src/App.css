@@ -202,3 +202,14 @@ div.scrollmenu a {
   padding: 6px;
   text-decoration: none;
 }
+
+div.round_frame {
+        border-radius: '30px';
+        padding: '20px';
+        background-color: #FCF9F8;
+        overflow: 'hidden';
+        display: 'flex';
+        align-items: 'center';
+        justify-content: 'center';
+        align-self: 'center';
+}
