@@ -61,7 +61,7 @@ function Home() {
       </div>
       <div style={{
         backgroundColor: '#FEEDF0',
-        minHeight: '280px',
+        minHeight: '240px',
         flexDirection: 'row',
         display: 'flex',
         justifyContent: 'space-between',
@@ -70,10 +70,10 @@ function Home() {
         padding: '40px 5%',
         boxSizing: 'border-box'
       }}>
-        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>People reached through our media</p> </div>
-        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Youth engaged directly through events</p> </div>
-        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Schools across Thailand reached</p> </div>
-        <div class = "round_frame" style={{ width: '15%', height: '70%' }}> <p>Countries reached globally</p> </div>
+        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>250,000+</g> <b>People reached through our media</b> </div>
+        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>4,100+</g> <b>Youth engaged directly through events</b> </div>
+        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>100+</g> <b>Schools across Thailand reached</b> </div>
+        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>20+</g> <b>Countries reached globally</b> </div>
 
       </div>
     </>
