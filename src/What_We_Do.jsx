@@ -9,7 +9,7 @@ function What_We_Do() {
                 <h3 style={{ color: '#005232', margin: 0, fontSize: '16px' }}>Take Action Today</h3>
             </div>
             
-            <div style={{ maxWidth: '600px', textAlign: 'center', margin: '40px 20px 80px 20px' }}>
+            <div style={{ maxWidth: '600px', textAlign: 'center', margin: '5px 20px 80px 20px' }}>
                 <h1 style={{ color: '#005232', fontWeight: 800, marginBottom: '20px' }}> Empower Change with Green Youth </h1>
                 <h3 style={{ color: '#3F4942', fontWeight: 400, margin: 0, lineHeight: '1.5' }}> 
                     Whether you are a student, a community leader, or an organization, there are
@@ -96,7 +96,7 @@ const styles = {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: '60px'
+        marginTop: '80px',
     },
     card: {
         backgroundColor: '#F7F5F3', 
