@@ -45,7 +45,7 @@ function Home() {
         minHeight: '270px',
         boxSizing: 'border-box',
         padding: '40px 5%',
-        alighnItems: 'center',
+        alignItems: 'center',
       }}>
         <p style = {{ color: '#3F4A3E', maxHeight: '15px', fontSize: '10px', fontWeight: '800', letterSpacing: '4px'}}>
           STRATEGIC GLOBAL PARTNERS
@@ -75,6 +75,30 @@ function Home() {
         <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>100+</g> <b>Schools across Thailand reached</b> </div>
         <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>20+</g> <b>Countries reached globally</b> </div>
 
+      </div>
+
+      <div style={{
+        border: '1px solid #BECABB4D',
+        minHeight: '200px',
+        boxSizing: 'border-box',
+        padding: '40px 5%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+
+      }}>
+        <div className="green_round_frame" style={{ width: '15%', minWidth: '140px', borderRadius: '20px', margin: 0 }}>
+          <h3 style={{ color: '#005232', margin: 0, fontSize: '16px', textAlign: 'center' }}>Take Action Today</h3>
+        </div>
+        <div style={{ maxWidth: '800px', width: '100%', textAlign: 'center', margin: '5px auto 80px' }}>
+                <h1 style={{ color: '#005232', fontWeight: 800, marginBottom: '20px' }}> Who We Are </h1>
+                <h3 style={{ color: '#3F4942', fontWeight: 400, margin: 0, lineHeight: '1.5', width: '100%', textAlign: 'center'}}> 
+                    Green Youth Thailand, founded in early 2022, is a youth led environmental organization
+ making climate education more accessible and engaging for Thai youth. We share climate stories
+ through media, creative content, and hands-on initiatives that connect environmental issues to everyday life.
+                </h3>
+            </div>
       </div>
     </>
   );
