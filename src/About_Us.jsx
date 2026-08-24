@@ -29,33 +29,55 @@ function About_Us() {
             backgroundColor: '#FEEDF0'}}>
             <div style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '40px', marginBottom: '40px' }}>
                 <div style={{...styles.card, backgroundColor: '#30964D', color: '#FFFFFF'}}>
-      
-                    <h1 style={styles.title}>20+</h1>
+
+                    <div style={styles.iconPlaceholder}> 
+                      <img 
+                        src={Rocket} 
+                        alt="Rocket" 
+                        style={{ width: '10%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                    <h1 style={{...styles.title, textAlign: 'left'}}>20+</h1>
                     
-                    <h2 style={styles.subtitle}>Major Initiatives</h2>
+                    <h2 style={{...styles.subtitle, textAlign: 'left'}}>Major Initiatives</h2>
                     
-                    <p style={styles.bodyText}>
+                    <p style={{...styles.bodyText, textAlign: 'left'}}>
                         Covering 5 core themes from environmental education to sustainable innovation.
                     </p>
                 </div>
 
                 <div style={styles.card}>
-                    <h1 style={{...styles.title, color: '#006B2D'}}>1,400+</h1>
+                    <div style={styles.iconPlaceholder}> 
+                      <img 
+                        src={People} 
+                        alt="People" 
+                        style={{ width: '10%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                    <h1 style={{...styles.title, color: '#006B2D', textAlign: 'left'}}>1,400+</h1>
                     
-                    <h2 style={{...styles.subtitle, color: '#191C1C'}}>Youth Engaged</h2>
+                    <h2 style={{...styles.subtitle, color: '#191C1C', textAlign: 'left'}}>Youth Engaged</h2>
                     
-                    <p style={styles.bodyText}>
+                    <p style={{...styles.bodyText, textAlign: 'left'}}>
                         Empowering change-makers through
                         workshops, rallies, and summits.
                     </p>
                 </div>
 
                 <div style={styles.card}>
-                    <h1 style={{...styles.title, color: '#006B2D'}}>100+</h1>
+                    <div style={styles.iconPlaceholder}> 
+                      <img 
+                        src={Earth} 
+                        alt="Earth" 
+                        style={{ width: '10%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+
+                    <h1 style={{...styles.title, color: '#006B2D', textAlign: 'left'}}>100+</h1>
                     
-                    <h2 style={{...styles.subtitle, color: '#191C1C'}}>Schools</h2>
+                    <h2 style={{...styles.subtitle, color: '#191C1C', textAlign: 'left'}}>Schools</h2>
                     
-                    <p style={styles.bodyText}>
+                    <p style={{...styles.bodyText, textAlign: 'left'}}>
                         Transforming awareness across Thailand
                         and 20+ countries globally.
                     </p>
@@ -77,14 +99,14 @@ const styles = {
   card: {
     backgroundColor: '#FFFFFF', // The white color
     borderRadius: '30px',       // Soft, rounded corners
-    padding: '40px',            // Inner spacing so text doesn't touch the edge
-    width: '225px',             // The width of the square
-    minHeight: '150px',         // Ensures it remains roughly square
+    padding: '15px',            // Inner spacing so text doesn't touch the edge
+    width: '350px',             // The width of the square
+    maxHeight: '220px',         // Ensures it remains roughly square
     color: '#000000',           // Black text
     boxSizing: 'border-box',    // Keeps padding inside the width
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   round_frame: {
         borderRadius: '30px',
