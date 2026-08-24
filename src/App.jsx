@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import yellow_girl from './assets/หัวเหลืองgurl.png';
+import gathering from './assets/gathering.png';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import About_Us from "./About_Us";
@@ -79,7 +80,7 @@ function Home() {
 
       <div style={{
         border: '1px solid #BECABB4D',
-        minHeight: '200px',
+        minHeight: '180px',
         boxSizing: 'border-box',
         padding: '40px 5%',
         display: 'flex',
@@ -99,6 +100,13 @@ function Home() {
  through media, creative content, and hands-on initiatives that connect environmental issues to everyday life.
                 </h3>
             </div>
+      </div>
+       <div style={{ flex: '1', minHeight: '400px', display: 'flex', justifyContent: 'center' }}>
+        <img 
+          src={gathering} 
+          alt="gathering" 
+          style={{ width: '100%', height: 'auto', display: 'block' }}
+        />
       </div>
     </>
   );
