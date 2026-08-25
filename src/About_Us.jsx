@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import './index.css';
 import Rocket from './assets/Rocket.png';
-import SharkHand from './assets/ShakeHand.png';
+import ShakeHand from './assets/ShakeHand.png';
 import Tree from './assets/Tree.png';
 import People from './assets/People.png'
 import Earth from './assets/Earth.png'
@@ -85,8 +85,47 @@ function About_Us() {
             </div>
         
             <div style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'left', gap: '40px' }}>
-                <div style={styles.card}></div>
-                <div style={styles.card}></div>
+
+
+
+                <div style={styles.card}>
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
+                    <img 
+                          src={Tree} 
+                          alt="Tree" 
+                          style={{ width: '8%', height: 'auto', display: 'block' }}
+                          />
+                    <p style={{...styles.bodyText, textAlign: 'left', margin: 0}}>
+                        Environmental Actions
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px' }}>
+
+                  </div>
+                </div>
+
+
+                <div style={styles.card}>
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
+                  <img 
+                        src={ShakeHand} 
+                        alt="ShakeHand" 
+                        style={{ width: '8%', height: 'auto', display: 'block' }}
+                        />
+                    <p style={{...styles.bodyText, textAlign: 'left', margin: 0}}>
+                        Strategic Collaborators
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px' }}>
+
+                  </div>
+                </div>
+
+
+
+
             </div>
             
         </div>
@@ -99,9 +138,9 @@ const styles = {
   card: {
     backgroundColor: '#FFFFFF', // The white color
     borderRadius: '30px',       // Soft, rounded corners
-    padding: '15px',            // Inner spacing so text doesn't touch the edge
+    padding: '25px',            // Inner spacing so text doesn't touch the edge
     width: '350px',             // The width of the square
-    maxHeight: '220px',         // Ensures it remains roughly square
+    maxHeight: '240px',         // Ensures it remains roughly square
     color: '#000000',           // Black text
     boxSizing: 'border-box',    // Keeps padding inside the width
     display: 'flex',
