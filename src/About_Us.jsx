@@ -88,25 +88,36 @@ function About_Us() {
 
 
 
-                <div style={styles.card}>
+                <div style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                     <img 
                           src={Tree} 
                           alt="Tree" 
-                          style={{ width: '8%', height: 'auto', display: 'block' }}
+                          style={{ width: '8 %', height: 'auto', display: 'block' }}
                           />
                     <p style={{...styles.bodyText, textAlign: 'left', margin: 0}}>
                         Environmental Actions
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px' }}>
-
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '80px', margin: '20px', alignSelf: 'center' }}>
+                      <div style ={{flexDirection: 'column', alignItems: 'center'}}>
+                          <h2 style = {{color: '#006B2D', fontWeight: 700, fontSize: '24px'}}>3,000</h2>
+                          <p style = {{color: '#3F4A3E', fontWeight: 700, fontSize: '10px'}}>MANGROVES</p>
+                        </div>
+                      <div style ={{flexDirection: 'column', alignItems: 'center'}}>
+                          <h2 style = {{color: '#006B2D', fontWeight: 700, fontSize: '24px'}}>4+</h2>
+                          <p style = {{color: '#3F4A3E', fontWeight: 700, fontSize: '10px'}}>UPCYCLING</p>
+                        </div>
+                      <div style ={{flexDirection: 'column', alignItems: 'center'}}>
+                          <h2 style = {{color: '#006B2D', fontWeight: 700, fontSize: '24px'}}>500+</h2>
+                          <p style = {{color: '#3F4A3E', fontWeight: 700, fontSize: '10px'}}>KIDS TAUGHT</p>
+                        </div>
                   </div>
                 </div>
 
 
-                <div style={styles.card}>
+                <div style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                   <img 
                         src={ShakeHand} 
@@ -118,8 +129,10 @@ function About_Us() {
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px' }}>
-
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px', alignSelf: 'center' }}>
+                      <div></div>
+                      <div></div>
+                      <div></div>
                   </div>
                 </div>
 
