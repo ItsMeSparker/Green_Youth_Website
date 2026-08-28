@@ -122,7 +122,7 @@ function About_Us() {
                   <img 
                         src={ShakeHand} 
                         alt="ShakeHand" 
-                        style={{ width: '8%', height: 'auto', display: 'block' }}
+                        style={{ width: '6%', height: 'auto', display: 'block' }}
                         />
                     <p style={{...styles.bodyText, textAlign: 'left', margin: 0}}>
                         Strategic Collaborators
@@ -173,6 +173,16 @@ const styles = {
         alignSelf: 'center', 
         marginTop: '50px'
     },
+    transparent_box: {
+      borderRadius: '8px',
+      padding: '8px 16px 8px 16px',
+      height: '32px',
+      width: 'fit-content',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }
+    ,
   iconPlaceholder: {
     fontSize: '32px',
     marginBottom: '10px'
