@@ -129,10 +129,14 @@ function About_Us() {
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '20px', alignSelf: 'center' }}>
-                      <div></div>
-                      <div></div>
-                      <div></div>
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '10px', alignSelf: 'center' }}>
+                      <div style = {styles.transparent_box}><p style = {{fontWeight: 700, fontSize: '12px', color: '#191C1C', letterSpacing: 0, lineHeight: '1.2'}}>UNESCAP</p></div>
+                      <div style = {styles.transparent_box}><p style = {{fontWeight: 700, fontSize: '12px', color: '#191C1C', letterSpacing: 0, lineHeight: '1.2'}}>European Union</p></div>
+                  </div>
+                  <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '40px', margin: '10px', alignSelf: 'center' }}>
+                    <div style = {styles.transparent_box}><p style = {{fontWeight: 700, fontSize: '12px', color: '#191C1C', letterSpacing: 0, lineHeight: '1.2'}}>Sector Experts</p></div>
+                      <div style = {styles.transparent_box}><p style = {{fontWeight: 700, fontSize: '12px', color: '#191C1C', letterSpacing: 0, lineHeight: '1.2'}}>BKK Governor</p></div>
+                    
                   </div>
                 </div>
 
@@ -175,15 +179,18 @@ const styles = {
     },
     transparent_box: {
       borderRadius: '8px',
-      padding: '8px 16px 8px 16px',
-      height: '32px',
+      padding: '8px 16px',
+      height: '24px',
       width: 'fit-content',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
+      border: '1px solid rgba(0, 0, 0, 0.1)',
+      boxShadow: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)',
+      backgroundColor: 'transparent'
     }
     ,
-  iconPlaceholder: {
+  iconPlaceholder: { 
     fontSize: '32px',
     marginBottom: '10px'
   },
