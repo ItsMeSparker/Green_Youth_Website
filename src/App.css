@@ -188,9 +188,24 @@
   width: auto;
 }
 
+.site-toolbar {
+  min-width: 0;
+}
+
+.site-nav {
+  display: flex;
+  gap: 20px;
+  min-width: 0;
+}
+
 div.scrollmenu {
   overflow: auto;
   white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  margin-top: 8%;
 }
 
 div.scrollmenu a {
@@ -204,14 +219,17 @@ div.scrollmenu a {
 }
 
 div.round_frame {
-        padding: '20px';
-        flex-direction: 'row';
+  padding: 20px;
         background-color: #FCF9F8;
-        overflow: 'hidden';
-        display: 'flex';
-        align-items: 'center';
-        justify-content: 'center';
-        align-self: 'center';
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 140px;
+  border-radius: 15px;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 div.round_frame g {
@@ -245,4 +263,199 @@ div.green_round_frame {
   align-items: center;
   justify-content: center;
   margin-top: 80px;
+}
+
+.home-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 5%;
+  min-height: calc(100vh - 70px);
+  box-sizing: border-box;
+}
+
+.hero-copy,
+.hero-art {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.hero-copy {
+  text-align: left;
+}
+
+.hero-copy h1 {
+  color: #005232;
+  font-size: 3rem;
+  margin: 0 0 20px;
+  line-height: 1.2;
+}
+
+.hero-copy h2 {
+  color: #30964D;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero-art,
+.gathering-art {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-art img,
+.gathering-art img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  align-items: stretch;
+  background-color: #FEEDF0;
+  padding: 40px 5%;
+  box-sizing: border-box;
+}
+
+.who-we-are {
+  border: 1px solid #BECABB4D;
+  padding: 40px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.who-we-are .green_round_frame {
+  width: min(220px, 100%);
+  margin: 0;
+}
+
+.who-copy {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin: 5px auto 80px;
+}
+
+.gathering-art {
+  min-height: 400px;
+}
+
+@media (max-width: 700px) {
+  .site-toolbar {
+    flex-wrap: wrap;
+    padding: 8px 12px;
+    gap: 4px;
+  }
+
+  .site-logo {
+    flex: 1 0 100%;
+    text-align: center;
+  }
+
+  .logo {
+    height: 64px;
+  }
+
+  .site-nav {
+    order: 2;
+    flex: 1;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .site-nav .MuiButton-root {
+    min-width: 0;
+    padding: 6px;
+    font-size: 0.72rem;
+  }
+
+  .join-button {
+    order: 3;
+    margin-left: 0 !important;
+    padding: 6px 10px !important;
+    font-size: 0.72rem !important;
+  }
+
+  .home-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 32px 6%;
+    min-height: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .hero-copy h2 {
+    font-size: 1.15rem;
+  }
+
+  .hero-art img {
+    max-height: 52vh;
+  }
+
+  div.scrollmenu {
+    justify-content: flex-start;
+    gap: 24px;
+    margin-top: 28px;
+    padding-bottom: 8px;
+  }
+
+  div.scrollmenu a {
+    font-size: 1rem;
+    flex: 0 0 auto;
+  }
+
+  .impact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 24px 6%;
+  }
+
+  div.round_frame {
+    padding: 12px 8px;
+    min-height: 125px;
+  }
+
+  div.round_frame g {
+    font-size: clamp(1.7rem, 8vw, 2.5rem);
+  }
+
+  div.round_frame b {
+    font-size: 0.75rem;
+    padding: 6px 2px;
+  }
+
+  .who-we-are {
+    padding: 28px 6%;
+  }
+
+  .who-copy {
+    margin-bottom: 36px;
+  }
+
+  .who-copy h1 {
+    font-size: 2rem;
+  }
+
+  .who-copy h3 {
+    font-size: 0.95rem;
+  }
+
+  .gathering-art {
+    min-height: 0;
+  }
 }

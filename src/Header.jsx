@@ -12,13 +12,13 @@ import './App.css';
 export default function Header() {
     return (
         <AppBar position="static">
-            <Toolbar sx={{backgroundColor:'#FFFFFF', justifyContent: "center", flex: 1, gap: "20px"}}>
+            <Toolbar className="site-toolbar" sx={{backgroundColor:'#FFFFFF', justifyContent: "center", flex: 1, gap: "20px"}}>
                 {/*Inside the IconButton, we 
                     can render various icons*/}
 
-                <div><img src={logo} className='logo' alt="Green Youth Logo" /></div>
+                <div className="site-logo"><img src={logo} className='logo' alt="Green Youth Logo" /></div>
                 
-                <div style={{selfAlign: 'center', display: 'flex', gap: '20px'}}>
+                <div className="site-nav">
                     <Link to="/" style={{ textDecoration: 'none' }}>
                         <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Home</Button>
                     </Link>
@@ -36,7 +36,7 @@ export default function Header() {
                     </Link>
                 </div>
 
-                <Button sx={{border: '2px solid black',backgroundColor:'#006B2D', color: "#FFFFFF", marginLeft: 'auto'}}>Join Now</Button>
+                <Button className="join-button" sx={{border: '2px solid black',backgroundColor:'#006B2D', color: "#FFFFFF", marginLeft: 'auto'}}>Join Now</Button>
             </Toolbar>
         </AppBar>
     );

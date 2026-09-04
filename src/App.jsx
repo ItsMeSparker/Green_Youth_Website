@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import yellow_girl from './assets/หัวเหลืองgurl.png';
 import gathering from './assets/gathering.png';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -10,33 +9,22 @@ import Get_Involved from "./Get_Involved";
 function Home() {
   return (
     <>
-    <div style={{ 
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      gap: '40px',
-      padding: '40px 5%',
-      minHeight: 'calc(100vh - 70px)', // Full screen height minus header
-      boxSizing: 'border-box',
-      flexWrap: 'wrap' // Drops the image below text on mobile screens
-    }}>
-      
+    <div className="home-hero">
       {/* Left Column: Text Content */}
-      <div style={{ flex: '1', minWidth: '500px', textAlign: 'left' }}>
-        <h1 style={{ color: '#005232', fontSize: '3rem', margin: '0 0 20px 0', lineHeight: '1.2' }}>
+      <div className="hero-copy">
+        <h1>
           Empowering Thai Youth to lead Climate Action
         </h1>
-        <h2 style={{ color: '#30964D', fontSize: '1.5rem', fontWeight: 'normal', lineHeight: '1.4', margin: 0 }}>
+        <h2>
           We're a youth-led platform making climate education fun and far from boring.
         </h2>
       </div>
 
       {/* Right Column: Illustration */}
-      <div style={{ flex: '1', minWidth: '400px', display: 'flex', justifyContent: 'center' }}>
+      <div className="hero-art">
         <img 
           src={yellow_girl} 
           alt="Yellow Girl" 
-          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </div>
     </div>
@@ -52,7 +40,7 @@ function Home() {
           STRATEGIC GLOBAL PARTNERS
         </p>
 
-        <div class = "scrollmenu" style = {{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: '5%', marginTop: '8%'}}>
+        <div className="scrollmenu">
           <a>UNESCAP</a>
           <a>EUROPEAN UNION</a>
           <a>UNDP</a>
@@ -60,39 +48,19 @@ function Home() {
           <a>CLIMATE FOUNDATIONs</a>
         </div>
       </div>
-      <div style={{
-        backgroundColor: '#FEEDF0',
-        minHeight: '240px',
-        flexDirection: 'row',
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        gap: '40px',
-        padding: '40px 5%',
-        boxSizing: 'border-box'
-      }}>
-        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>250,000+</g> <b>People reached through our media</b> </div>
-        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>4,100+</g> <b>Youth engaged directly through events</b> </div>
-        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>100+</g> <b>Schools across Thailand reached</b> </div>
-        <div class = "round_frame" style={{ width: '290px', height: '140px', borderRadius: '15px' }}> <g>20+</g> <b>Countries reached globally</b> </div>
+      <div className="impact-grid">
+        <div className="round_frame"> <g>250,000+</g> <b>People reached through our media</b> </div>
+        <div className="round_frame"> <g>4,100+</g> <b>Youth engaged directly through events</b> </div>
+        <div className="round_frame"> <g>100+</g> <b>Schools across Thailand reached</b> </div>
+        <div className="round_frame"> <g>20+</g> <b>Countries reached globally</b> </div>
 
       </div>
 
-      <div style={{
-        border: '1px solid #BECABB4D',
-        minHeight: '180px',
-        boxSizing: 'border-box',
-        padding: '40px 5%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        flexDirection: 'column',
-
-      }}>
-        <div className="green_round_frame" style={{ width: '15%', minWidth: '140px', borderRadius: '20px', margin: 0 }}>
+      <div className="who-we-are">
+        <div className="green_round_frame">
           <h3 style={{ color: '#005232', margin: 0, fontSize: '16px', textAlign: 'center' }}>Take Action Today</h3>
         </div>
-        <div style={{ maxWidth: '800px', width: '100%', textAlign: 'center', margin: '5px auto 80px' }}>
+        <div className="who-copy">
                 <h1 style={{ color: '#005232', fontWeight: 800, marginBottom: '20px' }}> Who We Are </h1>
                 <h3 style={{ color: '#3F4942', fontWeight: 400, margin: 0, lineHeight: '1.5', width: '100%', textAlign: 'center'}}> 
                     Green Youth Thailand, founded in early 2022, is a youth led environmental organization
@@ -101,11 +69,10 @@ function Home() {
                 </h3>
             </div>
       </div>
-       <div style={{ flex: '1', minHeight: '400px', display: 'flex', justifyContent: 'center' }}>
+      <div className="gathering-art">
         <img 
           src={gathering} 
           alt="gathering" 
-          style={{ width: '100%', height: 'auto', display: 'block' }}
         />
       </div>
     </>
