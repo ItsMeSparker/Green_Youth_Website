@@ -2,7 +2,7 @@ import React from 'react';
 
 function What_We_Do() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', overflowX: 'hidden' }}>
+        <div className="what-we-do-page" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', overflowX: 'hidden' }}>
             
             {/* Top Header Section */}
             <div style={styles.round_frame}>
@@ -18,7 +18,7 @@ function What_We_Do() {
             </div>
 
             {/* Two-Column Section */}
-            <div style={{ 
+            <div className="what-we-do-columns" style={{ 
                 display: 'flex', 
                 alignItems: 'flex-start', /* Aligns both columns to the top */
                 justifyContent: 'center', 
@@ -32,7 +32,7 @@ function What_We_Do() {
             }}>
                 
                 {/* Left Column: Join The Movement */}
-                <div style={{ flex: 1, minWidth: '320px', maxWidth: '500px', display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                <div className="what-we-do-column" style={{ flex: 1, minWidth: '320px', maxWidth: '500px', display: 'flex', flexDirection: 'column', gap: '30px' }}>
                     <div>
                         <h1 style={{ color: '#005232', fontWeight: 700, margin: '0 0 15px 0' }}> Join The Movement </h1>
                         <p style={{ color: '#3F4942', fontSize: '16px', lineHeight: '1.5', margin: 0 }}> Be part of the frontline energy. We are building a global network of young leaders committed to tangible climate justice and environmental restoration.</p>
@@ -62,7 +62,7 @@ function What_We_Do() {
                 </div>
 
                 {/* Right Column: Collaborate With Us */}
-                <div style={{ flex: 1, minWidth: '320px', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '30px' }}>
+                <div className="what-we-do-column" style={{ flex: 1, minWidth: '320px', maxWidth: '600px', display: 'flex', flexDirection: 'column', gap: '30px' }}>
                     <div>
                         <h1 style={{ color: '#005232', fontWeight: 700, margin: '0 0 15px 0' }}> Collaborate With Us </h1>
                         <p style={{ color: '#3F4942', fontSize: '16px', lineHeight: '1.5', margin: 0 }}> Are you a school, non-profit, or corporate partner? We work together with organizations to scale youth-led climate solutions and education.</p>

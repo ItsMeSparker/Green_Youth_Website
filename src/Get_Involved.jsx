@@ -4,8 +4,8 @@ import Email from './assets/Email.png'
 
 function Get_Involved(){
     return(
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '60px', padding: '50px', maxWidth: '1200px', margin: '0 auto' }}>
-    <div style={{alignItems: 'flex-start', justifyContent: 'flex-start', padding: '30px', maxWidth: '50%'}}>
+    <div className="get-involved-page" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '60px', padding: '50px', maxWidth: '1200px', margin: '0 auto' }}>
+    <div className="contact-info" style={{alignItems: 'flex-start', justifyContent: 'flex-start', padding: '30px', maxWidth: '50%'}}>
         
         <div style={styles.round_frame}>
                 <h3 style={{ color: '#4E4447', margin: 0, fontSize: '16px' }}>IMPACT DRIVEN</h3>
@@ -41,9 +41,9 @@ function Get_Involved(){
     </div> 
 
     {/* --- RIGHT SIDE: The Pink Form Card --- */}
-            <div style={styles.card}>
+            <div className="contact-form" style={styles.card}>
                 {/* Row 1: Name and Email */}
-                <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
+                <div className="form-name-row" style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
                     <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
                         <label style={styles.label}>Name</label>
                         <input type="text" placeholder="Jane Doe" style={styles.input} />

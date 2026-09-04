@@ -459,3 +459,185 @@ div.green_round_frame {
     min-height: 0;
   }
 }
+
+/* Secondary pages keep their existing content but adapt their fixed desktop rows. */
+.about-page,
+.what-we-do-page,
+.get-involved-page {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.about-intro-copy,
+.about-stat-grid,
+.about-detail-grid,
+.what-we-do-column,
+.contact-info,
+.contact-form {
+  min-width: 0;
+}
+
+.about-intro-copy {
+  max-width: 600px;
+}
+
+.about-stat-grid,
+.about-detail-grid {
+  width: 100%;
+  max-width: 1140px;
+  flex-wrap: wrap;
+}
+
+.about-card,
+.about-detail-card {
+  flex: 1 1 300px;
+}
+
+.about-detail-card {
+  max-width: 500px;
+}
+
+.about-card img,
+.about-detail-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.what-we-do-columns {
+  max-width: 1200px;
+}
+
+.get-involved-page {
+  width: 100%;
+}
+
+.contact-info {
+  flex: 1 1 0;
+}
+
+.contact-form {
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 700px) {
+  .about-intro {
+    min-height: auto !important;
+    padding: 56px 6% 48px !important;
+  }
+
+  .about-intro-copy {
+    width: 100% !important;
+  }
+
+  .about-intro-copy h1 {
+    font-size: 2.25rem;
+  }
+
+  .about-content {
+    min-height: auto !important;
+    padding: 40px 6% !important;
+  }
+
+  .about-stat-grid,
+  .about-detail-grid {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: stretch !important;
+  }
+
+  .about-card,
+  .about-detail-card {
+    width: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    flex-basis: auto;
+  }
+
+  .about-card img,
+  .about-detail-card img {
+    width: auto !important;
+    max-width: 48px;
+    max-height: 48px;
+  }
+
+  .about-detail-card > div:last-child {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 18px !important;
+  }
+
+  .about-detail-card > div:last-child > div {
+    flex: 1 1 70px;
+  }
+
+  .what-we-do-page > div:nth-child(2) {
+    margin-bottom: 40px !important;
+  }
+
+  .what-we-do-page > div:nth-child(2) h1 {
+    font-size: 2.15rem;
+  }
+
+  .what-we-do-columns {
+    flex-direction: column !important;
+    gap: 44px !important;
+    padding: 48px 6% !important;
+  }
+
+  .what-we-do-column {
+    width: 100%;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  .what-we-do-column > div > h1 {
+    font-size: 2rem;
+  }
+
+  .what-we-do-column [style*="padding: 35px"] {
+    padding: 24px !important;
+  }
+
+  .get-involved-page {
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 32px 6% !important;
+  }
+
+  .contact-info {
+    width: 100%;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .contact-info > div:nth-child(2) {
+    margin: 10px 0 !important;
+  }
+
+  .contact-info h1 {
+    font-size: 2.15rem;
+  }
+
+  .contact-info h2 {
+    font-size: clamp(1rem, 5vw, 1.75rem) !important;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-form {
+    max-width: none !important;
+    padding: 28px 20px !important;
+    border-radius: 28px !important;
+  }
+
+  .form-name-row {
+    flex-direction: column;
+    gap: 16px !important;
+  }
+}

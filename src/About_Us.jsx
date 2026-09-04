@@ -13,10 +13,10 @@ function About_Us() {
 
   return (
     <>
-    <div>
+    <div className="about-page">
         {/* First Section */}
-        <div style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'left', padding: '40px 20px'}}>
-            <div style={{width: '600px', textAlign: 'left'}}>
+        <div className="about-intro" style={{ minHeight: '70vh', display: 'flex', alignItems: 'center', justifyContent: 'left', padding: '40px 20px'}}>
+          <div className="about-intro-copy" style={{width: '600px', textAlign: 'left'}}>
                 <h1 style={{color: '#005232', fontWeight: 'bold'}}>Our Work in Action</h1>
                 <h3 style={{color: 'black', fontWeight: 200}}> We bridge the gap between climate awareness and meaningful action through youth-led initiatives
                         that inspire, educate, and mobilize communities for a sustainable future.</h3>
@@ -24,11 +24,11 @@ function About_Us() {
         </div>
 
         {/* Second Section */}
-        <div style={{ minHeight: '200vh', display: 'flex', alignItems: 'center', 
+        <div className="about-content" style={{ minHeight: '200vh', display: 'flex', alignItems: 'center', 
             justifyContent: 'normal',  flexDirection: 'column', padding: '40px 20px', 
             backgroundColor: '#FEEDF0'}}>
-            <div style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '40px', marginBottom: '40px' }}>
-                <div style={{...styles.card, backgroundColor: '#30964D', color: '#FFFFFF'}}>
+            <div className="about-stat-grid" style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '40px', marginBottom: '40px' }}>
+              <div className="about-card" style={{...styles.card, backgroundColor: '#30964D', color: '#FFFFFF'}}>
 
                     <div style={styles.iconPlaceholder}> 
                       <img 
@@ -46,7 +46,7 @@ function About_Us() {
                     </p>
                 </div>
 
-                <div style={styles.card}>
+                <div className="about-card" style={styles.card}>
                     <div style={styles.iconPlaceholder}> 
                       <img 
                         src={People} 
@@ -64,7 +64,7 @@ function About_Us() {
                     </p>
                 </div>
 
-                <div style={styles.card}>
+                <div className="about-card" style={styles.card}>
                     <div style={styles.iconPlaceholder}> 
                       <img 
                         src={Earth} 
@@ -84,11 +84,11 @@ function About_Us() {
                 </div>
             </div>
         
-            <div style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'left', gap: '40px' }}>
+            <div className="about-detail-grid" style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'left', gap: '40px' }}>
 
 
 
-                <div style={{...styles.card, width: '500px'}}>
+                <div className="about-detail-card" style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                     <img 
                           src={Tree} 
@@ -117,7 +117,7 @@ function About_Us() {
                 </div>
 
 
-                <div style={{...styles.card, width: '500px'}}>
+                <div className="about-detail-card" style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                   <img 
                         src={ShakeHand} 
