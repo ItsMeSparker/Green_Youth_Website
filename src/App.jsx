@@ -1,5 +1,6 @@
 import yellow_girl from './assets/หัวเหลืองgurl.png';
 import gathering from './assets/gathering.png';
+import jomquan from './assets/JomQuan.png';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from "./Header";
 import About_Us from "./About_Us";
@@ -75,6 +76,38 @@ function Home() {
           alt="gathering" 
         />
       </div>
+
+
+      <div className = "the-seed-of-change">
+        <div>
+          <img style = {{flex: 1, maxHeight: '380px', borderRadius: '30px'}}
+          src={jomquan} 
+          alt="jomquan" 
+        />
+        </div>
+
+        <div classname = "text-container">
+            <div className="green_round_frame">
+              <h3 style={{ color: '#005232', margin: 0, fontSize: '16px', fontWeight: 'bold'}}>Our Origin Story</h3>
+            </div>
+            <div style = {{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', lineHeight: 1.1, marginTop: 10}}>
+              <h1 style = {{ color: '#191C1C', fontSize: '56px', fontWeight: 800, margin: 0}}> <span> The Seed </span> </h1>
+              <h1 style = {{ color: '#005232', fontSize: '56px', fontWeight: 800, margin: 0}}>  <span> of Change </span> </h1>
+            </div>
+            <div >
+              <h3 style = {{color: '#3F4A3E', textAlign: 'left', fontSize: '16px', fontWeight: 400}}>In our first two years (2022 – 2023), we built ourselves as an approachable climate media platform, creating a variety of 
+                  content around basic climate knowledge. We also tried new, creative ways to share climate news so it felt more engaging
+                  and relevant. Our goal has always been to encourage youth
+                  to join the climate movement by showing that environmentalism can be fun, relatable, and part of everyday life.
+
+                  In 2024, we reached a turning point. After mostly communicating one way, we noticed a growing disconnect among youth.</h3>
+              </div>
+          </div>
+
+      </div>
+
+
+
     </>
   );
 }

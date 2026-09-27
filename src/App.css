@@ -257,7 +257,7 @@ div.round_frame b {
 
 div.green_round_frame {
   border-radius: 30px;
-  background-color: #0052321A;
+  background-color: #00524f1a;
   padding: 10px 30px;
   display: flex;
   align-items: center;
@@ -336,7 +336,7 @@ div.green_round_frame {
 }
 
 .who-we-are .green_round_frame {
-  width: min(220px, 100%);
+  width: min(160px, 100%);
   margin: 0;
 }
 
@@ -349,6 +349,30 @@ div.green_round_frame {
 
 .gathering-art {
   min-height: 400px;
+}
+
+.the-seed-of-change {
+  padding: 60px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  box-sizing: border-box;
+  gap: 60px;
+}
+
+.the-seed-of-change .green_round_frame {
+  width: min(135px, 80%);
+  margin: 10;
+  padding: 8px 20px;
+}
+
+.text-container{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px
 }
 
 @media (max-width: 700px) {
@@ -639,5 +663,22 @@ div.green_round_frame {
   .form-name-row {
     flex-direction: column;
     gap: 16px !important;
+  }
+
+  .the-seed-of-change {
+    flex-direction: column; /* Forces the image and text to stack vertically */
+    align-items: center;    /* Centers the stacked items */
+    gap: 32px;              /* Reduces the large desktop gap for a tighter mobile feel */
+    padding: 32px 6%;       /* Matches the padding of your other mobile sections */
+  }
+  
+  .the-seed-of-change .text-container {
+    align-items: center;    /* Centers the text horizontally on mobile */
+    text-align: center;     /* Ensures paragraph text is centered */
+  }
+  
+  .the-seed-of-change img {
+    max-width: 100%;        /* Prevents the image from overflowing the phone screen */
+    height: auto;           /* Maintains the correct proportions */
   }
 }
