@@ -358,7 +358,7 @@ div.green_round_frame {
   justify-content: space-between;
   flex-direction: row;
   box-sizing: border-box;
-  gap: 60px;
+  gap: 70px;
 }
 
 .the-seed-of-change .green_round_frame {
@@ -372,7 +372,31 @@ div.green_round_frame {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px
+  gap: 8px
+}
+
+.mission-and-vision {
+  padding: 40px 8%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: 5px;
+}
+.mission-and-vision h1 {
+  margin: 0;
+}
+
+.mission-and-vision p {
+  margin: 10px;
+}
+
+
+.green-line {
+  background-color: #30964D;
+  width: 96px;
+  height: 6px;
+  border-radius: 9999px;
 }
 
 @media (max-width: 700px) {

@@ -86,7 +86,7 @@ function Home() {
         />
         </div>
 
-        <div classname = "text-container">
+        <div className = "text-container">
             <div className="green_round_frame">
               <h3 style={{ color: '#005232', margin: 0, fontSize: '16px', fontWeight: 'bold'}}>Our Origin Story</h3>
             </div>
@@ -107,6 +107,14 @@ function Home() {
       </div>
 
 
+      <div className = "mission-and-vision">
+        <h1 style={{ color: '#005232', fontWeight: 700, fontSize: 56}}>
+          Mission and Vision
+        </h1>
+        <div className = "green-line"></div>
+        <p style = {{color: '#191C1C', fontWeight: 500, fontSize: 22, textAlign: 'center'}}>"We envision a future where every youth is climate-literate and
+          empowered to drive change through creative leadership."</p>
+      </div>
 
     </>
   );
