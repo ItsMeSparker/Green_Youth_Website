@@ -6,6 +6,13 @@ import Header from "./Header";
 import About_Us from "./About_Us";
 import What_We_Do from "./What_We_Do";
 import Get_Involved from "./Get_Involved";
+import Book from  "./assets/mav-Icon/book.png"
+import Edit from  "./assets/mav-Icon/edit.png"
+import Group from  "./assets/mav-Icon/group.png"
+import Leaf from  "./assets/mav-Icon/leaf.png"
+import Lightning from  "./assets/mav-Icon/lightning.png"
+import Trees from  "./assets/mav-Icon/trees.png"
+
 
 function Home() {
   return (
@@ -114,6 +121,48 @@ function Home() {
         <div className = "green-line"></div>
         <p style = {{color: '#191C1C', fontWeight: 500, fontSize: 22, textAlign: 'center'}}>"We envision a future where every youth is climate-literate and
           empowered to drive change through creative leadership."</p>
+
+        <div className = "mission-card-container">
+          <div className = "mission-card"><div className = "circle"><img src = {Book} alt = "Book"/></div>
+            <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Simple Knowledge</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Simplifying complex climate research
+              into engaging content that resonates
+              with everyone.</p>
+          </div>
+          <div className = "mission-card"><div className = "circle"><img src = {Leaf} alt = "Leaf"/></div>
+          <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Sustainable Behaviors</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Promoting daily habits and lifestyle
+              choices that measurably reduce
+              environmental impact.</p>
+          </div>
+          <div className = "mission-card"><div className = "circle"><img src = {Edit} alt = "Edit"/></div>
+          <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Creative Storytelling</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Harnessing the power of media and art
+            to tell the story of our planet's beauty
+            and fragility.</p>
+          </div>
+        </div>
+
+        <div className = "mission-card-container">
+          <div className = "mission-card"><div className = "circle"><img src = {Group} alt = "Group"/></div>
+          <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Strong Community</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Building collaborative networks that
+            support youth leaders from local to
+            international levels.</p>
+          </div>
+          <div className = "mission-card"><div className = "circle"><img src = {Trees} alt = "Trees"/></div>
+          <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Reconnect with Nature</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Inspiring youth to step outside and
+            rediscover their innate connection with
+            the natural world.</p>
+          </div>
+          <div className = "mission-card"><div className = "circle"><img src = {Lightning} alt = "Lightning"/></div>
+          <h3 style = {{color: '#191C1C', fontWeight: 700, fontSize: 16}}>Empower Action</h3>
+            <p style = {{color: '#3F4A3E', fontWeight: 400, fontSize: 16, textAlign: 'left'}}>Providing the tools, training, and
+            resources needed for youth-led
+            projects to succeed.</p>
+          </div>
+        </div>
       </div>
 
     </>

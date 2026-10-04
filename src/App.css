@@ -574,6 +574,48 @@ div.green_round_frame {
   box-sizing: border-box;
 }
 
+.mission-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+  height: 170px;
+  opacity: 1;
+  gap: 12px;
+  border-radius: 40px;
+  border-width: 1px;
+  padding: 40px;
+  background-color: #FFFFFF;
+}
+
+.mission-card h3{
+  margin: 0px;
+}
+
+.mission-card p{
+  margin: 0px;
+}
+
+.circle{
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #30964D1A;
+}
+
 @media (max-width: 700px) {
   .about-intro {
     min-height: auto !important;
@@ -705,4 +747,10 @@ div.green_round_frame {
     max-width: 100%;        /* Prevents the image from overflowing the phone screen */
     height: auto;           /* Maintains the correct proportions */
   }
+
+  .mission-card-container {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 }
