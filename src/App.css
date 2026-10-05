@@ -381,6 +381,7 @@ div.green_round_frame {
   align-items: center;
   flex-direction: column;
   box-sizing: border-box;
+  background-image: linear-gradient(to bottom, #F9F9F8, #FEEDF0);
   gap: 5px;
 }
 .mission-and-vision h1 {
@@ -391,12 +392,126 @@ div.green_round_frame {
   margin: 10px;
 }
 
+.mission-card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.mission-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 280px;
+  height: 170px;
+  opacity: 1;
+  gap: 12px;
+  border-radius: 40px;
+  border-width: 1px;
+  padding: 40px;
+  background-color: #FFFFFF;
+}
+
+.mission-card h3{
+  margin: 0px;
+}
+
+.mission-card p{
+  margin: 0px;
+}
+
+.circle{
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #30964D1A;
+}
 
 .green-line {
   background-color: #30964D;
   width: 96px;
   height: 6px;
   border-radius: 9999px;
+}
+
+.milestone {
+  display: flex;
+  width: auto;
+  height: auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FEEDF0;
+}
+
+.milestone h1 {
+  margin: 0;
+}
+
+.milestone p {
+  margin-bottom: 50px;
+}
+
+.milestone-collection{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.milestone-card {
+  position: relative;
+  display: flex;
+  width: 450px;
+  height: 160px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 48px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+  padding-left: 32px;
+  gap: 16px;
+  border-radius: 16px;
+  background-color: #F9F9F8;
+}
+
+.year-bubble{
+  position: absolute;
+  display: flex;
+  top: -16px;
+  left: 34px;
+
+  padding: 10px 28px;
+  width: auto;
+  height: 20px;
+
+  background-color: #30964D;
+  color: white;
+
+  border-radius: 999px;
+
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+
+  white-space: nowrap;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+}
+
+.milestone-card h2 {
+  margin: 0;
+}
+
+.milestone-card p {
+  margin: 0;
 }
 
 @media (max-width: 700px) {
@@ -506,6 +621,12 @@ div.green_round_frame {
   .gathering-art {
     min-height: 0;
   }
+
+  .milestone-collection{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 }
 
 /* Secondary pages keep their existing content but adapt their fixed desktop rows. */
@@ -574,47 +695,7 @@ div.green_round_frame {
   box-sizing: border-box;
 }
 
-.mission-card-container {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-  margin: 10px;
-}
 
-.mission-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 280px;
-  height: 170px;
-  opacity: 1;
-  gap: 12px;
-  border-radius: 40px;
-  border-width: 1px;
-  padding: 40px;
-  background-color: #FFFFFF;
-}
-
-.mission-card h3{
-  margin: 0px;
-}
-
-.mission-card p{
-  margin: 0px;
-}
-
-.circle{
-  width: 56px;
-  height: 56px;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: #30964D1A;
-}
 
 @media (max-width: 700px) {
   .about-intro {

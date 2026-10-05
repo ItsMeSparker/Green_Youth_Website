@@ -165,6 +165,21 @@ function Home() {
         </div>
       </div>
 
+
+      <div className = "milestone">
+        <h1 style={{ color: '#005232', fontWeight: 700, fontSize: 56}}> Milestone </h1>
+         <p style = {{color: '#191C1C', fontWeight: 500, fontSize: 22, textAlign: 'center'}}>"We envision a future where every youth is climate-literate and
+          empowered to drive change through creative leadership."</p>
+        
+        <div className = "milestone-collection">
+          <div className = 'milestone-card'> <div className = 'year-bubble'>2022 - 2023</div> <h2 style={{color: '#30964D', fontWeight: 700, fontSize: 24}}>Media Platform Roots</h2>
+          <p style={{color: '#3F4A3E', fontWeight: 400, fontSize: 24, textAlign: 'left'}}> Launched as a digital-first media platform focused on environmental
+          storytelling reaching over 100,000 unique viewers.</p></div>
+          <div className = 'milestone-card'> <div className = 'year-bubble'>2024</div> <h2 style={{color: '#30964D', fontWeight: 700, fontSize: 24}}>Community Ecosystem</h2>
+          <p style={{color: '#3F4A3E', fontWeight: 400, fontSize: 24, textAlign: 'left'}}> Transitioned into a holistic community organization establishing
+          physical meetups and our Youth Climate Circle.</p></div>
+        </div>
+      </div>
     </>
   );
 }
