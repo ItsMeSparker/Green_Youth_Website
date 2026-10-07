@@ -834,4 +834,8 @@ div.green_round_frame {
   align-items: center;
   justify-content: center;
 }
+
+  .milestone-card {
+    width:auto
+  };
 }
