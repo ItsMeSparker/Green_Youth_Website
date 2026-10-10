@@ -1,43 +1,73 @@
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
-import logo from './assets/green_youth_logo.png';
-import { Link } from 'react-router-dom';
-import './App.css';
 
+import { Link, NavLink } from "react-router-dom";
 
-export default function Header() {
-    return (
-        <AppBar position="static">
-            <Toolbar className="site-toolbar" sx={{backgroundColor:'#FFFFFF', justifyContent: "center", flex: 1, gap: "20px"}}>
-                {/*Inside the IconButton, we 
-                    can render various icons*/}
+import logo from "./assets/green_youth_logo.png";
+import "./App.css";
 
-                <div className="site-logo"><img src={logo} className='logo' alt="Green Youth Logo" /></div>
-                
-                <div className="site-nav">
-                    <Link to="/" style={{ textDecoration: 'none' }}>
-                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Home</Button>
-                    </Link>
+export default function Header({ pageTitle }) {
+  const navItems = [
+    { label: "Home", to: "/", end: true },
+    { label: "about us", to: "/About_Us" },
+    { label: "What we do", to: "/What_We_Do" },
+    { label: "Get Involved", to: "/Get_Involved" },
+  ];
 
-                    <Link to="/About_Us" style={{ textDecoration: 'none' }}>
-                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>About Us</Button>
-                    </Link>
-                    
-                    <Link to="/What_We_Do" style={{ textDecoration: 'none' }}>
-                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>What We Do</Button>
-                    </Link>
-                    
-                    <Link to="/Get_Involved" style={{ textDecoration: 'none' }}>
-                        <Button sx={{color: "#FF83B3", fontWeight: "bold"}}>Get Involved</Button>
-                    </Link>
-                </div>
+  return (
+    <>
+      {/* Optional page-title strip */}
+      {pageTitle && (
+        <div className="site-topline">
+          {pageTitle}
+        </div>
+      )}
 
-                <Button className="join-button" sx={{border: '2px solid black',backgroundColor:'#006B2D', color: "#FFFFFF", marginLeft: 'auto'}}>Join Now</Button>
-            </Toolbar>
-        </AppBar>
-    );
+      <AppBar
+        component="header"
+        position="static"
+        elevation={0}
+        className="site-appbar"
+      >
+        <Toolbar className="site-toolbar">
+          {/* Logo */}
+          <Link to="/" className="site-logo">
+            <img
+              src={logo}
+              className="logo"
+              alt="Green Youth"
+            />
+          </Link>
+
+          {/* Navigation */}
+          <nav className="site-nav" aria-label="Main navigation">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                end={item.end}
+                className={({ isActive }) =>
+                  `site-nav-link${isActive ? " is-active" : ""}`
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* Join Now button */}
+          <Button
+            component={Link}
+            to="/Get_Involved"
+            variant="contained"
+            disableElevation
+            className="join-button"
+          >
+            Join Now
+          </Button>
+        </Toolbar>
+      </AppBar>
+    </>
+  );
 }

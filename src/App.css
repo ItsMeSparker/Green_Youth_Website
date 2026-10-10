@@ -545,8 +545,9 @@ div.green_round_frame {
 
   .join-button {
     order: 3;
+    border-radius: 50%;
     margin-left: 0 !important;
-    padding: 6px 10px !important;
+    padding: 10px 12px !important;
     font-size: 0.72rem !important;
   }
 
@@ -872,4 +873,240 @@ div.green_round_frame {
   .milestone-card {
     width:auto
   };
+}
+
+/* =========================
+   Page title strip
+   ========================= */
+
+.site-topline {
+  height: 182px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;
+
+  padding: 0 3% 16px;
+
+  background-color: #FFFFFF;
+  color: #CCCCCC;
+
+  font-size: 22px;
+  font-weight: 500;
+
+  border-bottom: 1px solid #FCF4F4;
+}
+
+
+/* =========================
+   AppBar
+   ========================= */
+
+.site-appbar {
+  background-color: #FFFFFF !important;
+  color: #006B2D !important;
+  box-shadow: none !important;
+}
+
+
+/* =========================
+   Main toolbar layout
+   ========================= */
+
+.site-toolbar {
+  display: grid !important;
+
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+
+  width: 100%;
+  height: 110px;
+  min-height: 110px !important;
+
+  box-sizing: border-box;
+
+  /* Left padding positions the logo;
+     right padding positions Join Now. */
+  padding: 0 3.5% 0 8% !important;
+}
+
+
+/* =========================
+   Logo
+   ========================= */
+
+.site-logo {
+  grid-column: 1;
+  justify-self: start;
+
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+  text-decoration: none;
+}
+
+.site-toolbar .logo {
+  display: block;
+
+  width: auto;
+  height: 64px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   Navigation links
+   ========================= */
+
+.site-nav {
+  grid-column: 2;
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 36px;
+  min-width: 0;
+
+  white-space: nowrap;
+}
+
+.site-nav-link {
+  display: inline-block;
+
+  padding: 8px 0 6px;
+
+  color: #FF83B3;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.2;
+
+  text-decoration: none;
+  text-transform: none;
+
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s ease;
+}
+
+.site-nav-link:hover {
+  color: #006B2D;
+}
+
+/* Active page: green text and underline */
+
+.site-nav-link.is-active {
+  color: #006B2D;
+  border-bottom-color: #006B2D;
+}
+
+
+/* =========================
+   Join Now button
+   ========================= */
+
+.site-toolbar > .join-button.MuiButton-root {
+  grid-column: 3;
+  justify-self: end;
+
+  min-width: 155px;
+  min-height: 63px;
+
+  padding: 16px 30px;
+
+  background-color: #006B2D;
+  color: #FFFFFF;
+
+  border: none;
+  border-radius: 9999px;
+
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none;
+
+  box-shadow: none;
+}
+
+.site-toolbar > .join-button.MuiButton-root:hover {
+  background-color: #005824;
+  box-shadow: none;
+}
+
+
+/* =========================
+   Responsive layout
+   ========================= */
+
+@media (max-width: 1100px) {
+  .site-toolbar {
+    padding: 0 24px !important;
+    gap: 20px;
+  }
+
+  .site-nav {
+    gap: 20px;
+  }
+
+  .site-nav-link {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 900px) {
+  .site-topline {
+    height: 90px;
+    padding: 0 18px 12px;
+    font-size: 16px;
+  }
+
+  .site-toolbar {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    height: auto;
+    min-height: 0 !important;
+
+    padding: 14px 16px !important;
+    gap: 12px;
+  }
+
+  .site-logo {
+    flex: 1 0 100%;
+    justify-content: center;
+  }
+
+  .site-toolbar .logo {
+    height: 58px;
+  }
+
+  .site-nav {
+    order: 2;
+
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px 22px;
+  }
+
+  .site-nav-link {
+    font-size: 16px;
+  }
+
+  .site-toolbar > .join-button.MuiButton-root {
+    order: 3;
+
+    min-width: 0;
+    min-height: 48px;
+
+    padding: 12px 24px;
+    border-radius: 9999px;
+
+    font-size: 15px;
+  }
 }
