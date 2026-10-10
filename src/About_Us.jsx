@@ -7,6 +7,10 @@ import ShakeHand from './assets/ShakeHand.png';
 import Tree from './assets/Tree.png';
 import People from './assets/People.png'
 import Earth from './assets/Earth.png'
+import More_Group from './assets/pillars-icon/more_group.png'
+import More_Edit from './assets/pillars-icon/more_edit.png'
+import Team from './assets/pillars-icon/team.png'
+import { borderRadius, justifyContent } from '@mui/system';
 
 function About_Us() {
     const [count, setCount] = useState(0);
@@ -24,11 +28,11 @@ function About_Us() {
         </div>
 
         {/* Second Section */}
-        <div className="about-content" style={{ minHeight: '200vh', display: 'flex', alignItems: 'center', 
+        <div className="about-content" style={{ minHeight: '95vh', display: 'flex', alignItems: 'center', 
             justifyContent: 'normal',  flexDirection: 'column', padding: '40px 20px', 
             backgroundColor: '#FEEDF0'}}>
             <div className="about-stat-grid" style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '40px', marginBottom: '40px' }}>
-              <div className="about-card" style={{...styles.card, backgroundColor: '#30964D', color: '#FFFFFF'}}>
+                <div className="about-card" style={{...styles.card, backgroundColor: '#30964D', color: '#FFFFFF'}}>
 
                     <div style={styles.iconPlaceholder}> 
                       <img 
@@ -86,8 +90,6 @@ function About_Us() {
         
             <div className="about-detail-grid" style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'left', gap: '40px' }}>
 
-
-
                 <div className="about-detail-card" style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                     <img 
@@ -116,7 +118,6 @@ function About_Us() {
                   </div>
                 </div>
 
-
                 <div className="about-detail-card" style={{...styles.card, width: '500px'}}>
                   <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: '20px', margin: '20px'  }}>
                   <img 
@@ -139,12 +140,63 @@ function About_Us() {
                     
                   </div>
                 </div>
-                
-
-
-
             </div>
-            
+
+            {/* Three Pillars */}
+              <div style={styles.round_frame}>
+                <h3 style={{ color: '#005232', fontSize: '16px', fontWeight: 'bold'}}>Take Action Today</h3>
+            </div>
+            <h1 style={{color: '#005232', fontWeight: 'bold', marginTop: '10px'}}>Our Three Pillars</h1>
+             <div className="about-stat-grid" style={{ flexDirection: 'row', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '40px', marginBottom: '40px' }}>
+              <div className="about-card" style={styles.card}>
+                    <div style = {styles.greenIconPlaceholder}>
+                        <img
+                          src = {More_Edit}
+                          alt = "More_Edit"
+                          style={{ width: '50%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                    <h3 style = {{color: '#006B2D', textAlign: 'left'}}>
+                      Creative Climate Media
+                    </h3>
+                    <p style = {{color: '#3F4A3E', textAlign: 'left'}}>Redefining storytelling through
+                      digital innovation and youth-led
+                      narratives that inspire real action.</p>
+                </div>
+
+                <div className="about-card" style={styles.card}>
+                    <div style = {styles.greenIconPlaceholder}>
+                        <img
+                          src = {More_Group}
+                          alt = "More_Group"
+                          style={{ width: '40%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                    <h3 style = {{color: '#006B2D', textAlign: 'left'}}>
+                      Youth Engagement
+                    </h3>
+                    <p style = {{color: '#3F4A3E', textAlign: 'left'}}>Hands-on workshops, volunteering,
+                      and field activities that build
+                      tangible skills for a green future.</p>
+                </div>
+
+                <div className="about-card" style={styles.card}>
+                    <div style = {styles.greenIconPlaceholder}>
+                        <img
+                          src = {Team}
+                          alt = "Team"
+                          style={{ width: '40%', height: 'auto', display: 'block' }}
+                        />
+                    </div>
+                    <h3 style = {{color: '#006B2D', textAlign: 'left'}}>
+                      Community Building
+                    </h3>
+                    <p style = {{color: '#3F4A3E', textAlign: 'left'}}>Fostering a nationwide network of
+                      climate guardians through our 24
+                      local active chapters.</p>
+                </div>
+             </div>
+
         </div>
     </div>
     </>
@@ -165,17 +217,18 @@ const styles = {
     justifyContent: 'flex-start',
   },
   round_frame: {
+        display: 'flex',
         borderRadius: '30px',
         padding: '20px',
         backgroundColor: '#0052321A',
-        width: '180px',
-        height: '25px',
+        width: 'auto',
+        height: '8px',
         overflow: 'hidden',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         alignSelf: 'center', 
-        marginTop: '50px'
+        marginTop: '100px'
     },
     transparent_box: {
       borderRadius: '8px',
@@ -193,6 +246,15 @@ const styles = {
   iconPlaceholder: { 
     fontSize: '32px',
     marginBottom: '10px'
+  },
+  greenIconPlaceholder: {
+      display: 'flex',
+      width: '48px',
+      height: '48px',
+      backgroundColor: '#006B2D1A',
+      borderRadius: '16px',
+      justifyContent: 'center',
+      alignItems: 'center',
   },
   title: {
     fontSize: '48px',
