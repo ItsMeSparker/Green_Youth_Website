@@ -4,6 +4,7 @@ import Email from './assets/Email.png'
 
 function Get_Involved(){
     return(
+    <>
     <div className="get-involved-page" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '60px', padding: '50px', maxWidth: '1200px', margin: '0 auto' }}>
     <div className="contact-info" style={{alignItems: 'flex-start', justifyContent: 'flex-start', padding: '30px', maxWidth: '50%'}}>
         
@@ -77,6 +78,12 @@ function Get_Involved(){
                 </button>
             </div>
     </div>
+    <div className = "bottom-section">
+        <h2>Green Youth</h2>
+        <p>© 2024 Green Youth Thailand. Empowering the
+          next generation of climate leaders.</p>
+    </div>
+    </>
     )
 }
 

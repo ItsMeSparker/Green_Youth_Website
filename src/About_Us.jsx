@@ -199,6 +199,11 @@ function About_Us() {
 
         </div>
     </div>
+    <div className = "bottom-section">
+        <h2>Green Youth</h2>
+        <p>© 2024 Green Youth Thailand. Empowering the
+          next generation of climate leaders.</p>
+    </div>
     </>
   )
 }

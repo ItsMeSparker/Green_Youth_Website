@@ -695,6 +695,40 @@ div.green_round_frame {
   box-sizing: border-box;
 }
 
+.bottom-section {
+  display: flex;
+  height: fit-content;
+  padding: 40px 20px 60px 20px;
+  background-color: #FCF9F8;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px
+}
+
+.bottom-section h2 {
+  color: #006B2D;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.bottom-section p {
+  color: #3F4A3E;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 25.6px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  max-width: 320px;
+  text-align: left;
+}
 
 
 @media (max-width: 700px) {

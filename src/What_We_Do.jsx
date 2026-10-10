@@ -2,6 +2,7 @@ import React from 'react';
 
 function What_We_Do() {
     return (
+        <>
         <div className="what-we-do-page" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', overflowX: 'hidden' }}>
             
             {/* Top Header Section */}
@@ -85,6 +86,12 @@ function What_We_Do() {
                 </div>
             </div>
         </div>
+        <div className = "bottom-section">
+            <h2>Green Youth</h2>
+            <p>© 2024 Green Youth Thailand. Empowering the
+            next generation of climate leaders.</p>
+        </div>
+        </>
     )
 }
 
