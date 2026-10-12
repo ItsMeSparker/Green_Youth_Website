@@ -1036,6 +1036,33 @@ div.green_round_frame {
   box-shadow: none;
 }
 
+.form-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-status {
+  margin: 0 0 16px;
+  font-size: 14px;
+}
+
+.form-status--success {
+  color: #006B2D;
+}
+
+.form-status--error {
+  color: #B42318;
+}
+
+.contact-form button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
 
 /* =========================
    Responsive layout

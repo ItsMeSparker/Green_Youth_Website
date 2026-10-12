@@ -1,8 +1,118 @@
-import React from 'react';
+import { useState } from 'react';
+import { Turnstile } from "react-turnstile";
 import Camera from './assets/Camera.png'
 import Email from './assets/Email.png'
 
 function Get_Involved(){
+
+    const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+    website: ""
+    });
+
+    const [turnstileToken, setTurnstileToken] = useState("");
+    const [turnstileWidgetKey, setTurnstileWidgetKey] = useState(0);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState({
+    type: "",
+    message: ""
+    });
+
+    function handleFormChange(event) {
+    const { name, value } = event.target;
+
+    setFormData((previous) => ({
+        ...previous,
+        [name]: value
+    }));
+    }
+
+    async function handleSubmit(event) {
+    event.preventDefault();
+    setStatus({ type: "", message: "" });
+
+    if (!turnstileToken) {
+        setStatus({
+        type: "error",
+        message: "Please complete the security verification."
+        });
+        return;
+    }
+
+    const endpoint = import.meta.env.VITE_GOOGLE_APPS_SCRIPT_URL;
+
+    if (!endpoint) {
+        setStatus({
+        type: "error",
+        message: "The form endpoint is not configured."
+        });
+        return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+        const response = await fetch(endpoint, {
+        method: "POST",
+        redirect: "follow",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            website: formData.website,
+            turnstileToken: turnstileToken
+        })
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || result.ok !== true) {
+        throw new Error(
+            result.message || "Your message could not be submitted."
+        );
+        }
+
+        setStatus({
+        type: "success",
+        message: "Thank you! Your message has been received."
+        });
+
+        setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        website: ""
+        });
+
+    } catch (error) {
+        console.error("Contact form submission failed:", error);
+
+        setStatus({
+        type: "error",
+        message:
+            error instanceof Error &&
+            error.message !== "Failed to fetch"
+            ? error.message
+            : "We could not confirm your submission. Please try again later."
+        });
+
+    } finally {
+        setIsSubmitting(false);
+        setTurnstileToken("");
+
+        // The previous CAPTCHA token cannot be reused.
+        setTurnstileWidgetKey((previous) => previous + 1);
+    }
+    }
+
     return(
     <>
     <div className="get-involved-page" style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '60px', padding: '50px', maxWidth: '1200px', margin: '0 auto' }}>
@@ -42,41 +152,164 @@ function Get_Involved(){
     </div> 
 
     {/* --- RIGHT SIDE: The Pink Form Card --- */}
-            <div className="contact-form" style={styles.card}>
-                {/* Row 1: Name and Email */}
-                <div className="form-name-row" style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
-                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                        <label style={styles.label}>Name</label>
-                        <input type="text" placeholder="Jane Doe" style={styles.input} />
-                    </div>
-                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-                        <label style={styles.label}>Email</label>
-                        <input type="email" placeholder="jane@example.com" style={styles.input} />
-                    </div>
-                </div>
-                
-                {/* Row 2: Subject */}
-                <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '20px' }}>
-                    <label style={styles.label}>Subject</label>
-                    <input type="text" placeholder="How can we help?" style={styles.input} />
-                </div>
+            
+    <form
+    className="contact-form"
+    style={styles.card}
+    onSubmit={handleSubmit}
+    >
+    {/* Row 1: Name and Email */}
+    <div
+        className="form-name-row"
+        style={{
+        display: "flex",
+        gap: "20px",
+        marginBottom: "20px"
+        }}
+    >
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <label htmlFor="contact-name" style={styles.label}>
+            Name
+        </label>
+        <input
+            id="contact-name"
+            name="name"
+            type="text"
+            placeholder="Jane Doe"
+            style={styles.input}
+            value={formData.name}
+            onChange={handleFormChange}
+            maxLength={100}
+            autoComplete="name"
+            required
+        />
+        </div>
 
-                {/* Row 3: Message */}
-                <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '30px' }}>
-                    <label style={styles.label}>Message</label>
-                    <textarea placeholder="Write your message here..." style={styles.textarea}></textarea>
-                </div>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <label htmlFor="contact-email" style={styles.label}>
+            Email
+        </label>
+        <input
+            id="contact-email"
+            name="email"
+            type="email"
+            placeholder="jane@example.com"
+            style={styles.input}
+            value={formData.email}
+            onChange={handleFormChange}
+            maxLength={254}
+            autoComplete="email"
+            required
+        />
+        </div>
+    </div>
 
-                {/* Submit Button */}
-                <button style={styles.button}>
-                    Send Message
-                    {/* Inline SVG for the arrow icon to match the design */}
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginLeft: '8px' }}>
-                        <path d="M22 2L11 13" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                </button>
-            </div>
+    {/* Row 2: Subject */}
+    <div style={{ display: "flex", flexDirection: "column", marginBottom: "20px" }}>
+        <label htmlFor="contact-subject" style={styles.label}>
+        Subject
+        </label>
+        <input
+        id="contact-subject"
+        name="subject"
+        type="text"
+        placeholder="How can we help?"
+        style={styles.input}
+        value={formData.subject}
+        onChange={handleFormChange}
+        maxLength={150}
+        required
+        />
+    </div>
+
+    {/* Row 3: Message */}
+    <div style={{ display: "flex", flexDirection: "column", marginBottom: "24px" }}>
+        <label htmlFor="contact-message" style={styles.label}>
+        Message
+        </label>
+        <textarea
+        id="contact-message"
+        name="message"
+        placeholder="Write your message here..."
+        style={styles.textarea}
+        value={formData.message}
+        onChange={handleFormChange}
+        maxLength={5000}
+        required
+        />
+    </div>
+
+    {/* Honeypot: legitimate visitors should leave this empty */}
+    <div className="form-honeypot" aria-hidden="true">
+        <label htmlFor="contact-website">Website</label>
+        <input
+        id="contact-website"
+        name="website"
+        type="text"
+        value={formData.website}
+        onChange={handleFormChange}
+        autoComplete="off"
+        tabIndex={-1}
+        />
+    </div>
+
+    {/* CAPTCHA */}
+    <div style={{ marginBottom: "20px" }}>
+        <Turnstile
+        key={turnstileWidgetKey}
+        sitekey={import.meta.env.VITE_TURNSTILE_SITE_KEY}
+        onVerify={(token) => setTurnstileToken(token)}
+        onExpire={() => setTurnstileToken("")}
+        onError={() => setTurnstileToken("")}
+        />
+    </div>
+
+    {/* Submission status */}
+    {status.message && (
+        <p
+        role="status"
+        aria-live="polite"
+        className={`form-status form-status--${status.type}`}
+        >
+        {status.message}
+        </p>
+    )}
+
+    {/* Submit Button */}
+    <button
+        type="submit"
+        style={styles.button}
+        disabled={isSubmitting}
+    >
+        {isSubmitting ? "Sending..." : "Send Message"}
+
+        <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{ marginLeft: "8px" }}
+        aria-hidden="true"
+        >
+        <path
+            d="M22 2L11 13"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        <path
+            d="M22 2L15 22L11 13L2 9L22 2Z"
+            stroke="white"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+        />
+        </svg>
+    </button>
+    </form>
+
     </div>
     <div className = "bottom-section">
         <h2>Green Youth</h2>
